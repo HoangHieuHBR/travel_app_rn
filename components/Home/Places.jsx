@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, VirtualizedList } from "react-native";
+import { StyleSheet, View, VirtualizedList } from "react-native";
 import HeightSpacer from "../Reusable/HeightSpacer";
 import { SIZES } from "../../constants/theme";
 import Country from "../Tiles/Country/Country";

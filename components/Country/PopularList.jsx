@@ -1,0 +1,25 @@
+import { View, FlatList } from "react-native";
+import ReusableTile from "../Reusable/ReusableTile";
+import { useNavigation } from "@react-navigation/native";
+
+const PopularList = ({ data }) => {
+  const navigation = useNavigation();
+
+  return (
+    <FlatList
+      data={data}
+      scrollEnabled={false}
+      showsVerticalScrollIndicator={false}
+      renderItem={({ item }) => (
+        <View style={{ marginBottom: 10 }}>
+          <ReusableTile
+            item={item}
+            onPress={() => navigation.navigate("PlaceDetails", item._id)}
+          />
+        </View>
+      )}
+    />
+  );
+};
+
+export default PopularList;

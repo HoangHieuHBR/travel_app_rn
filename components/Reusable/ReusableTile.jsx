@@ -4,13 +4,14 @@ import { COLORS, SIZES, TEXT } from "../../constants/theme";
 import {
   HeightSpacer,
   NetworkImage,
+  Rating,
   ReusableText,
   WidthSpacer,
-} from "../../components";
+} from "..";
 
-const ReusableTitle = ({ item }) => {
+const ReusableTile = ({ item, onPress }) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <View style={reusable.rowWithSpace("flex-start")}>
         <NetworkImage
           source={item.imageUrl}
@@ -41,6 +42,8 @@ const ReusableTitle = ({ item }) => {
           <HeightSpacer height={8} />
 
           <View style={reusable.rowWithSpace("flex-start")}>
+            <Rating rating={item.rating} />
+
             <WidthSpacer width={5} />
 
             <ReusableText
@@ -56,7 +59,7 @@ const ReusableTitle = ({ item }) => {
   );
 };
 
-export default ReusableTitle;
+export default ReusableTile;
 
 const styles = StyleSheet.create({
   container: {
