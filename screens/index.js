@@ -10,6 +10,10 @@ import Recommended from "./details/Recommended";
 import PlaceDetails from "./details/PlaceDetails";
 import HotelDetails from "./details/HotelDetails";
 import HotelList from "./details/HotelList";
+import SelectRoom from "./details/SelectRoom";
+import TopBookings from "./top/TopBookings";
+import TopInfo from "./top/TopInfo";
+import TopTrips from "./top/TopTrips";
 
 export {
     Onboarding,
@@ -23,5 +27,9 @@ export {
     Recommended,
     PlaceDetails,
     HotelDetails,
-    HotelList
+    HotelList,
+    SelectRoom,
+    TopBookings,
+    TopInfo,
+    TopTrips
 }

@@ -40,13 +40,13 @@ const Home = ({ navigation }) => {
 
         <Places />
 
-        <HeightSpacer height={15} />
-
         <Recommendations />
 
         <HeightSpacer height={30} />
 
         <BestHotels />
+
+        <HeightSpacer height={20} />
       </ScrollView>
     </SafeAreaView>
   );

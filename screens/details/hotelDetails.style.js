@@ -4,7 +4,7 @@ import { COLORS } from "../../constants/theme";
 const styles = StyleSheet.create({
   container: {
     paddingTop: 20,
-    // marginHorizontal: 20,
+    marginHorizontal: 20,
   },
   titleContainer: {
     margin: 15,
@@ -17,7 +17,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   titleColumn: {
-    padding: 15,
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+  },
+  footer: {
+    paddingHorizontal: 30,
+    backgroundColor: COLORS.lightWhite,
+    height: 90,
+    paddingVertical: 20,
   },
 });
 

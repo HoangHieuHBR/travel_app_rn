@@ -8,6 +8,7 @@ const Rating = ({ rating }) => {
   return (
     <View style={reusable.rowWithSpace("flex-start")}>
       <MaterialCommunityIcons name="star" size={20} color={"#FD9942"} />
+      
       <WidthSpacer width={5} />
 
       <ReusableText text={rating} font={"medium"} size={15} color={"#FD9942"} />

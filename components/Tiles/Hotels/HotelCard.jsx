@@ -26,6 +26,8 @@ const HotelCard = ({ item, onPress, margin }) => {
             font={"medium"}
             size={SIZES.medium}
             color={COLORS.black}
+            numberOfLines={1}
+            textOverflow="ellipsis"
           />
 
           <HeightSpacer height={5} />

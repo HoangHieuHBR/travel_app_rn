@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const reusable = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 20,
   },
   rowWithSpace: (justifyContent) => ({
     flexDirection: "row",
