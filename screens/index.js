@@ -14,22 +14,34 @@ import SelectRoom from "./details/SelectRoom";
 import TopBookings from "./top/TopBookings";
 import TopInfo from "./top/TopInfo";
 import TopTrips from "./top/TopTrips";
+import Payments from "./profile/Payments";
+import Settings from "./settings/Settings";
+import Failed from "./bookings/Failed";
+import Successful from "./bookings/Successful";
+import Registration from "./authentication/Registration";
+import Login from "./authentication/Login";
 
 export {
-    Onboarding,
-    Home,
-    Location,
-    Chat,
-    Profile,
-    Search,
-    HotelSearch,
-    CountryDetails,
-    Recommended,
-    PlaceDetails,
-    HotelDetails,
-    HotelList,
-    SelectRoom,
-    TopBookings,
-    TopInfo,
-    TopTrips
-}
+  Onboarding,
+  Home,
+  Location,
+  Chat,
+  Profile,
+  Search,
+  HotelSearch,
+  CountryDetails,
+  Recommended,
+  PlaceDetails,
+  HotelDetails,
+  HotelList,
+  SelectRoom,
+  TopBookings,
+  TopInfo,
+  TopTrips,
+  Payments,
+  Settings,
+  Failed,
+  Successful,
+  Registration,
+  Login,
+};

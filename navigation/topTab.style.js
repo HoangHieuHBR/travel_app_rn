@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
     borderColor: COLORS.lightWhite,
     borderWidth: 2,
     borderRadius: 90
+  },
+
+  name: {
+    backgroundColor: COLORS.lightBlue,
+    padding: 5,
+    borderRadius: 12,
   }
 });
 

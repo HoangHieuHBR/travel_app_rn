@@ -3,6 +3,7 @@ import reusable from "./reusable.style";
 import ReusableText from "./ReusableText";
 import { AntDesign } from "@expo/vector-icons";
 import { COLORS, TEXT } from "../../constants/theme";
+import WidthSpacer from "./WidthSpacer";
 
 const AppBar = ({
   prefixIconBG,
@@ -14,16 +15,23 @@ const AppBar = ({
   top,
   left,
   right,
+  isNeedBackBtn = true,
 }) => {
   return (
     <View style={styles.overlay(top, left, right)}>
       <View style={reusable.rowWithSpace("space-between")}>
-        <TouchableOpacity
-          style={styles.prefixIcon(prefixIconBG)}
-          onPress={onPrefixPress}
-        >
-          <AntDesign name="left" size={26} />
-        </TouchableOpacity>
+        {isNeedBackBtn ? (
+          <TouchableOpacity
+            style={styles.prefixIcon(prefixIconBG)}
+            onPress={onPrefixPress}
+          >
+            <AntDesign name="left" size={26} />
+          </TouchableOpacity>
+        ) : (
+          <View>
+            <WidthSpacer width={30} />
+          </View>
+        )}
 
         <ReusableText
           text={title}

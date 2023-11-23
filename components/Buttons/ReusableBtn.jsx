@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { SIZES } from "../../constants/theme";
+import { COLORS, SIZES } from "../../constants/theme";
 
 const ReusableBtn = ({
   onPress,
@@ -7,13 +7,13 @@ const ReusableBtn = ({
   width,
   backgroundColor,
   borderWidth,
-  boderColor,
+  borderColor,
   textColor,
 }) => {
   return (
     <TouchableOpacity
       onPress={onPress}
-      style={styles.btnStyle(width, backgroundColor, borderWidth, boderColor)}
+      style={styles.btnStyle(width, backgroundColor, borderWidth, borderColor)}
     >
       <Text style={styles.btnText(textColor)}>{btnText}</Text>
     </TouchableOpacity>
@@ -23,7 +23,7 @@ const ReusableBtn = ({
 export default ReusableBtn;
 
 const styles = StyleSheet.create({
-  btnStyle: (width, backgroundColor, borderWidth, boderColor) => ({
+  btnStyle: (width, backgroundColor, borderWidth, borderColor) => ({
     backgroundColor: backgroundColor,
     width: width,
     height: 45,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: SIZES.small,
     borderWidth: borderWidth,
-    boderColor: boderColor,
+    borderColor: borderColor,
   }),
 
   btnText: (textColor) => ({

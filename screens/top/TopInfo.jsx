@@ -1,13 +1,28 @@
 import { StyleSheet, Text, View } from "react-native";
+import { ProfileTile } from "../../components";
 
-const TopInfo = () => {
-    return (
-        <View>
-            <Text>TopInfo</Text>
-        </View>
-    )
-}
+const TopInfo = ({ navigation }) => {
+  return (
+    <View style={{ margin: 20 }}>
+      <ProfileTile
+        title={"Personal Information"}
+        icon={"user"}
+        onPress={() => {}}
+      />
+      <ProfileTile
+        title={"Payments"}
+        icon={"creditcard"}
+        onPress={() => navigation.navigate("Payments")}
+      />
+      <ProfileTile
+        title={"Settings"}
+        icon={"setting"}
+        onPress={() => navigation.navigate("Settings")}
+      />
+    </View>
+  );
+};
 
-export default TopInfo
+export default TopInfo;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

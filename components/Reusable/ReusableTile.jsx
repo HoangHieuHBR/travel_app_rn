@@ -63,7 +63,7 @@ export default ReusableTile;
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    padding: 10,
     backgroundColor: COLORS.white,
     borderRadius: 12,
   },

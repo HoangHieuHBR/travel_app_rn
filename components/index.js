@@ -10,6 +10,9 @@ import AppBar from './Reusable/AppBar';
 import DescriptionText from './Reusable/DescriptionText';
 import HotelMap from './Hotel/HotelMap';
 import ReviewList from './Hotel/ReviewList';
+import ProfileTile from './Reusable/ProfileTile';
+import SettingTile from './Tiles/Settings/SettingTile';
+import AssetImage from './Image/AssetImage';
 
 export {
     ReusableText,
@@ -23,5 +26,8 @@ export {
     AppBar,
     DescriptionText,
     HotelMap,
-    ReviewList 
+    ReviewList,
+    ProfileTile,
+    SettingTile,
+    AssetImage
 }

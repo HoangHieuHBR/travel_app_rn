@@ -12,7 +12,7 @@ import Recommendations from "../../components/Home/Recommendations";
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={reusable.container}>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View style={reusable.rowWithSpace("space-between")}>
           <ReusableText
             text={"Hey User!"}
