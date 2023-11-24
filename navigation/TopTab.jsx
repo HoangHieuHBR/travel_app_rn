@@ -34,7 +34,6 @@ const TopTab = () => {
             top={40}
             left={20}
             right={20}
-            isNeedBackBtn={false}
           />
 
           <View style={styles.profile}>

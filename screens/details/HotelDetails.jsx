@@ -220,7 +220,7 @@ const HotelDetails = ({ navigation }) => {
           </View>
 
           <ReusableBtn
-            onPress={() => navigation.navigate("SelectRoom")}
+            onPress={() => navigation.navigate("RoomList")}
             btnText={"Select Room"}
             width={(SIZES.width - 50) / 2.2}
             backgroundColor={COLORS.green}

@@ -3,6 +3,7 @@ import ReusableBtn from './Buttons/ReusableBtn';
 import HeightSpacer from './Reusable/HeightSpacer';
 import WidthSpacer from './Reusable/WidthSpacer';
 import NetworkImage from './Reusable/NetworkImage';
+import AssetImage from './Reusable/AssetImage';
 import Rating from './Reusable/Rating';
 import HotelCard from './Tiles/Hotels/HotelCard';
 import ReviewTile from './Tiles/Reviews/ReviewTile';
@@ -12,7 +13,6 @@ import HotelMap from './Hotel/HotelMap';
 import ReviewList from './Hotel/ReviewList';
 import ProfileTile from './Reusable/ProfileTile';
 import SettingTile from './Tiles/Settings/SettingTile';
-import AssetImage from './Image/AssetImage';
 
 export {
     ReusableText,
@@ -29,5 +29,5 @@ export {
     ReviewList,
     ProfileTile,
     SettingTile,
-    AssetImage
+    AssetImage,
 }

@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import {
+  TouchableOpacity,
+  Text,
+  View,
+  TextInput,
+  KeyboardAvoidingView,
+  Platform,
+} from "react-native";
 import { useState } from "react";
 import styles from "./auth.style";
 import { Formik } from "formik";
@@ -23,7 +30,10 @@ const Registration = () => {
   const [obsecureText, setObsecureText] = useState(false);
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.container}
+    >
       <Formik
         initialValues={{ username: "", email: "", password: "" }}
         validationSchema={validationSchema}
@@ -165,9 +175,8 @@ const Registration = () => {
           </View>
         )}
       </Formik>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
 export default Registration;
-

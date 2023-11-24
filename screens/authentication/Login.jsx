@@ -88,7 +88,7 @@ const Login = () => {
                   <WidthSpacer width={10} />
 
                   <TextInput
-                    secureTextEntry={obsecureText}
+                    secureTextEntry={!obsecureText}
                     placeholder="Enter your password"
                     onFocus={() => setFieldTouched("password")}
                     onBlur={() => setFieldTouched("password", "")}
@@ -103,7 +103,7 @@ const Login = () => {
                     onPress={() => setObsecureText(!obsecureText)}
                   >
                     <MaterialCommunityIcons
-                      name={obsecureText ? "eye-outline" : "eye-off-outline"}
+                      name={!obsecureText ? "eye-outline" : "eye-off-outline"}
                       size={18}
                       color={COLORS.gray}
                     />

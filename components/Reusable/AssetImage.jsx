@@ -1,4 +1,4 @@
-import { StyleSheet, Image } from "react-native";
+import { Image } from "react-native";
 
 const AssetImage = ({ data, width, height, mode }) => {
   return (

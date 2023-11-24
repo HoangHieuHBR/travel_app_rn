@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 import reusable from "./reusable.style";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import WidthSpacer from "./WidthSpacer";
@@ -18,4 +18,3 @@ const Rating = ({ rating }) => {
 
 export default Rating;
 
-const styles = StyleSheet.create({});

@@ -18,7 +18,7 @@ const tabBarStyle = {
 
 const BottomTabNavigation = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1 , backgroundColor: "transparent"}}>
       <Tab.Navigator
         initialRouteName="Home"
         activeColor="#EB6A58"

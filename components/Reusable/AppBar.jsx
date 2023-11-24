@@ -15,23 +15,16 @@ const AppBar = ({
   top,
   left,
   right,
-  isNeedBackBtn = true,
 }) => {
   return (
     <View style={styles.overlay(top, left, right)}>
       <View style={reusable.rowWithSpace("space-between")}>
-        {isNeedBackBtn ? (
-          <TouchableOpacity
-            style={styles.prefixIcon(prefixIconBG)}
-            onPress={onPrefixPress}
-          >
-            <AntDesign name="left" size={26} />
-          </TouchableOpacity>
-        ) : (
-          <View>
-            <WidthSpacer width={30} />
-          </View>
-        )}
+        <TouchableOpacity
+          style={styles.prefixIcon(prefixIconBG)}
+          onPress={onPrefixPress}
+        >
+          <AntDesign name="left" size={26} />
+        </TouchableOpacity>
 
         <ReusableText
           text={title}

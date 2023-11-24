@@ -10,7 +10,8 @@ import Recommended from "./details/Recommended";
 import PlaceDetails from "./details/PlaceDetails";
 import HotelDetails from "./details/HotelDetails";
 import HotelList from "./details/HotelList";
-import SelectRoom from "./details/SelectRoom";
+import RoomList from "./details/RoomList";
+import SelectedRoom from "./details/SelectedRoom";
 import TopBookings from "./top/TopBookings";
 import TopInfo from "./top/TopInfo";
 import TopTrips from "./top/TopTrips";
@@ -34,7 +35,7 @@ export {
   PlaceDetails,
   HotelDetails,
   HotelList,
-  SelectRoom,
+  RoomList,
   TopBookings,
   TopInfo,
   TopTrips,
@@ -44,4 +45,5 @@ export {
   Successful,
   Registration,
   Login,
+  SelectedRoom,
 };

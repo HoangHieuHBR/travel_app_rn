@@ -1,15 +1,11 @@
-import { FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import reusable from "../Reusable/reusable.style";
-import { TEXT, COLORS, SIZES } from "../../constants/theme";
-import { Feather } from "@expo/vector-icons";
-import { ReusableText } from "..";
-import ReusableTile from "../Reusable/ReusableTile";
+import { StyleSheet, View } from "react-native";
+import { AppBar, HeightSpacer, ReusableBtn } from "../../components";
+import { COLORS, SIZES } from "../../constants/theme";
+import { FlatList } from "react-native";
+import ReusableTile from "../../components/Reusable/ReusableTile";
 
-const Recommendations = () => {
-  const navigation = useNavigation();
-
-  const recommendations = [
+const RoomList = ({ navigation }) => {
+  const rooms = [
     {
       _id: "64c631650298a05640539adc",
       country_id: "64c62bfc65af9f8c969a8d04",
@@ -61,50 +57,54 @@ const Recommendations = () => {
       review: "24455 Reviews",
     },
   ];
-
   return (
-    <View style={styles.container}>
-      <View
-        style={[
-          reusable.rowWithSpace("space-between"),
-          {
-            paddingBottom: 20,
-          },
-        ]}
-      >
-        <ReusableText
-          text={"Recommendations"}
-          font={"medium"}
-          size={TEXT.large}
-          color={COLORS.black}
+    <View style={{ flex: 1 }}>
+      <View style={{ height: 100 }}>
+        <AppBar
+          top={50}
+          left={20}
+          right={20}
+          title={"Select Room"}
+          prefixIconBG={COLORS.white}
+          onPrefixPress={() => navigation.goBack()}
         />
-
-        <TouchableOpacity onPress={() => navigation.navigate("Recommended")}>
-          <Feather name="list" size={20} />
-        </TouchableOpacity>
       </View>
 
       <FlatList
-        data={recommendations}
-        horizontal
+        data={rooms}
+        showsVerticalScrollIndicator={false}
         keyExtractor={(item) => item._id}
-        contentContainerStyle={{ columnGap: SIZES.medium }}
-        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 20 }}
         renderItem={({ item }) => (
-          <ReusableTile
-            item={item}
-            onPress={() => navigation.navigate("PlaceDetails", item._id)}
-          />
+          <View style={styles.titleColumn}>
+            <View style={styles.tile}>
+              <ReusableTile item={item} />
+
+              <HeightSpacer height={10} />
+
+              <View style={styles.btnStyle}>
+                <ReusableBtn
+                  onPress={() => navigation.navigate("SelectedRoom", { item })}
+                  btnText={"Select Room"}
+                  width={SIZES.width - 50}
+                  backgroundColor={COLORS.green}
+                  borderColor={COLORS.green}
+                  borderWidth={0}
+                  textColor={COLORS.white}
+                />
+              </View>
+            </View>
+          </View>
         )}
       />
     </View>
   );
 };
 
-export default Recommendations;
+export default RoomList;
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 30,
-  },
+  titleColumn: { marginHorizontal: 20, marginBottom: 10 },
+  tile: { backgroundColor: COLORS.lightWhite, borderRadius: 12 },
+  btnStyle: { margin: 10, alignItems: "center" },
 });
